@@ -30,7 +30,7 @@ export async function getServerSideProps(context) {
     const id = context.params.id;
 
     //const { data: results } = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=16a73049f57e193d70db549140af851a`);
-    const results = await (await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=16a73049f57e193d70db549140af851a`)).json();
+    const results = await (await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=16a73049f57e193d70db549140af851a&language=ko-KR`)).json();
 
     return {
         props: {

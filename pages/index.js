@@ -10,6 +10,7 @@ export default function Home() {
         fetch('https://api.themoviedb.org/3/movie/popular?api_key=16a73049f57e193d70db549140af851a&language=ko-KR')
             .then((response) => response.json())
             .then((data) => {
+                console.log(data.results);
                 setMovies(data.results);
             });
 
@@ -33,6 +34,7 @@ export default function Home() {
                             height={160}
                         ></Image>
                         <h3>{values.title}</h3>
+                        <p>{values.overview}</p>
                     </Link>
                 </span>
             ))}
